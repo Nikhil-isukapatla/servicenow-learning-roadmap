@@ -1,0 +1,166 @@
+# 📊 ServiceNow Data Model
+
+The ServiceNow Data Model is the foundation of the platform. Every application in ServiceNow stores its information in tables. Each table contains records, and each record consists of multiple fields.
+
+Understanding the Data Model is essential because almost every ServiceNow application is built using tables, records, and fields.
+
+---
+
+# 🎯 Learning Objectives
+
+After completing this module, I can:
+
+- Understand what a table is.
+- Differentiate between tables, records, and fields.
+- Understand the purpose of the Dictionary.
+- Explain parent and child tables.
+- Understand the Task table hierarchy.
+
+---
+
+# 📚 Topics Covered
+
+- Tables
+- Records
+- Fields
+- Dictionary
+- Parent and Child Tables
+- Task Table
+
+---
+
+# 📖 What is a Table?
+
+A table stores information about a particular type of object.
+
+Examples:
+
+| Table | Stores |
+|--------|--------|
+| Incident | Incident records |
+| User | User information |
+| Problem | Problem records |
+| Change Request | Change requests |
+
+Think of a table like an Excel sheet.
+
+Each row represents one record.
+
+Each column represents one field.
+
+---
+
+# 📄 What is a Record?
+
+A record is a single row inside a table.
+
+Example:
+
+| Number | Priority | State |
+|---------|----------|-------|
+| INC0010001 | High | New |
+
+This entire row is one record.
+
+---
+
+# 🏷️ What is a Field?
+
+A field is a single column inside a table.
+
+Examples:
+
+- Number
+- Caller
+- Priority
+- State
+- Short Description
+
+Each field stores one piece of information.
+
+---
+
+# 📘 What is the Dictionary?
+
+The Dictionary contains metadata about every field in a table.
+
+It defines:
+
+- Field Name
+- Data Type
+- Label
+- Default Value
+- Maximum Length
+- Attributes
+
+Developers use the Dictionary to understand and configure table fields.
+
+---
+
+# 🌳 Parent and Child Tables
+
+ServiceNow uses table inheritance.
+
+A child table automatically inherits fields from its parent table.
+
+Example:
+
+Task (Parent)
+
+├── Incident
+
+├── Problem
+
+├── Change Request
+
+└── Catalog Task
+
+This reduces duplication and keeps the data model organized.
+
+---
+
+# ⭐ Task Table
+
+The Task table is one of the most important tables in ServiceNow.
+
+Many ITSM applications extend the Task table.
+
+Common inherited fields include:
+
+- Number
+- State
+- Assigned To
+- Assignment Group
+- Short Description
+- Priority
+
+---
+
+# 💡 Real Example
+
+Suppose a user reports that they cannot access email.
+
+A new Incident record is created.
+
+That record is stored in the Incident table.
+
+The Incident table inherits common fields from the Task table while also having its own Incident-specific fields.
+
+---
+
+# ✅ What I Learned
+
+- Tables store data.
+- Records are rows inside tables.
+- Fields are columns inside tables.
+- The Dictionary defines field properties.
+- Parent tables pass common fields to child tables.
+- The Task table is the parent of many ITSM tables.
+
+---
+
+# 🎯 Summary
+
+The Data Model is the backbone of ServiceNow.
+
+Every application relies on tables, records, fields, and relationships to store and manage information efficiently.
