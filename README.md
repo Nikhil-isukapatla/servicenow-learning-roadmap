@@ -12,7 +12,7 @@ This repository documents my journey of learning **ServiceNow** from beginner to
 | Module | Status |
 |---------|--------|
 | 🟢 01 Platform | ✅ Completed |
-| 🔵 02 Data Model | ⏳ In Progress |
+| 🔵 02 Data Model | ✅ Completed  |
 | 🟡 03 ITSM | ⏳ Pending |
 | 🟠 04 Service Catalog | ⏳ Pending |
 | 🟣 05 Flow Designer | ⏳ Pending |
